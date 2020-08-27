@@ -21,7 +21,7 @@ def call(int buildNumber) {
           steps {
             bat label: '', script: '''C:
             cd /'''
-            echo "Current Directory is root C:\"
+            echo "Current Directory is root C:"
           }
         }
       }
