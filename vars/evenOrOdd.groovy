@@ -6,7 +6,7 @@ def call(int buildNumber) {
         stage('Even Stage') {
           steps {
             bat label: '', script: '''
-            cd C:\\Users\\bnarayanansr\\Desktop
+            cd C:\\Users\\bnarayanansr\\Desktop\\pipelinetest
             echo "The build number is even" >> BuildResult.txt
             '''
           }
