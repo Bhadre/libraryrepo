@@ -5,7 +5,10 @@ def call(int buildNumber) {
       stages {
         stage('Even Stage') {
           steps {
-            echo "The build number is even"
+            bat label: '', script: '''
+            cd C:\\Users\\bnarayanansr\\Desktop
+            echo "The build number is even" >> BuildResult.txt
+            '''
           }
         }
       }
