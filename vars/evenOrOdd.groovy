@@ -5,7 +5,9 @@ def call(int buildNumber) {
       stages {
         stage('Even Stage') {
           steps {
-            echo "The build number is even"
+            bat label: '', script: '''C:
+            cd /
+            dir'''
           }
         }
       }
@@ -16,7 +18,9 @@ def call(int buildNumber) {
       stages {
         stage('Odd Stage') {
           steps {
-            echo "The build number is odd"
+            bat label: '', script: '''C:
+            cd /'''
+            echo "You are in root directory"
           }
         }
       }
