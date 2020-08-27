@@ -5,18 +5,14 @@ def call() {
             stage('Find Current Directory Stage') {
                 steps {
                     bat label: '', script: '''C:
-                    cd /'''
-                    echo "Current Directory is root C:"
+                    cd C:\Users\bnarayanansr\Desktop'''
+                    echo "Current Directory is Desktop"
                 }
-            }
-            stage('List Directory Stage') {
                 steps {
-                    bat label: '', script: '''C:
-                    cd /
-                    dir'''
-                    echo "Here are the directories in C Drive"
+                    bat label: '', script: '''
+                    mkdir pipelinetest'''
+                    echo "New folder Created"
                 }
             }
-        }
     }
 }
