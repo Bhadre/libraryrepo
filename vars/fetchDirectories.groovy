@@ -8,10 +8,14 @@ def call() {
                     cd C:\\Users\\bnarayanansr\\Desktop'''
                     echo "Current Directory is Desktop"
                 }
+            }
+            stage('List Directory Stage') {
                 steps {
                     bat label: '', script: '''
-                    mkdir pipelinetest'''
-                    echo "New folder Created"
+                    cd C:\\Users\\bnarayanansr\\Desktop
+                    mkdir "pipelinetest"
+                    echo "New Folder Created"
+                    '''
                 }
             }
         }
