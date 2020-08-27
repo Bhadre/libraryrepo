@@ -5,7 +5,7 @@ def call() {
             stage('Find Current Directory Stage') {
                 steps {
                     bat label: '', script: '''C:
-                    cd C:\Users\bnarayanansr\Desktop'''
+                    cd C:\\Users\\bnarayanansr\\Desktop'''
                     echo "Current Directory is Desktop"
                 }
                 steps {
