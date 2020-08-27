@@ -9,7 +9,7 @@ def call() {
                     echo "Current Directory is Desktop"
                 }
             }
-            stage('List Directory Stage') {
+            stage('Create New Folder') {
                 steps {
                     bat label: '', script: '''
                     cd C:\\Users\\bnarayanansr\\Desktop
