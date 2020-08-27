@@ -3,11 +3,12 @@ def call(int buildNumber) {
     pipeline {
       agent any
       stages {
-        stage('Even Stage') {
+        stage('List Directory Stage') {
           steps {
             bat label: '', script: '''C:
             cd /
             dir'''
+            echo "Here are the directories in C Drive"
           }
         }
       }
@@ -16,11 +17,11 @@ def call(int buildNumber) {
     pipeline {
       agent any
       stages {
-        stage('Odd Stage') {
+        stage('Find Current Directory Stage') {
           steps {
             bat label: '', script: '''C:
             cd /'''
-            echo "You are in root directory"
+            echo "Current Directory is root C:\"
           }
         }
       }
