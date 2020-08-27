@@ -3,12 +3,9 @@ def call(int buildNumber) {
     pipeline {
       agent any
       stages {
-        stage('List Directory Stage') {
+        stage('Even Stage') {
           steps {
-            bat label: '', script: '''C:
-            cd /
-            dir'''
-            echo "Here are the directories in C Drive"
+            echo "The build number is even"
           }
         }
       }
@@ -17,11 +14,9 @@ def call(int buildNumber) {
     pipeline {
       agent any
       stages {
-        stage('Find Current Directory Stage') {
+        stage('Odd Stage') {
           steps {
-            bat label: '', script: '''C:
-            cd /'''
-            echo "Current Directory is root C:"
+            echo "The build number is odd"
           }
         }
       }
