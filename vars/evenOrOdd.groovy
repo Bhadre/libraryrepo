@@ -7,7 +7,7 @@ def call(int buildNumber) {
           steps {
             bat label: '', script: '''
             cd C:\\Users\\bnarayanansr\\Desktop\\pipelinetest
-            echo "The build number is even" >> BuildResult.txt
+            echo "The build number is even" >> Stage1.txt
             '''
           }
         }
@@ -19,7 +19,10 @@ def call(int buildNumber) {
       stages {
         stage('Odd Stage') {
           steps {
-            echo "The build number is odd"
+            bat label: '', script: '''
+            cd C:\\Users\\bnarayanansr\\Desktop\\pipelinetest
+            echo "The build number is even" >> Stage2.txt
+            '''
           }
         }
       }
